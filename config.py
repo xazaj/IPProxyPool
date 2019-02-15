@@ -94,6 +94,78 @@ parserList = [
         'moduleName': 'CnproxyPraser',
         'pattern': r'<tr><td>(\d+\.\d+\.\d+\.\d+)<SCRIPT type=text/javascript>document.write\(\"\:\"(.+)\)</SCRIPT></td><td>(HTTP|SOCKS4)\s*',
         'position': {'ip': 0, 'port': 1, 'type': -1, 'protocol': 2}
+    },
+    {
+        'urls': ['http://lab.crossincode.com/proxy/'],
+        'type': 'xpath',
+        'pattern': "/html/body/div/div/div[2]/div[2]/table/tr[position()>1]",
+        'position': {'ip': './td[1]', 'port': './td[2]', 'type': './td[3]', 'protocol': './td[4]'}
+    },
+    {
+        'urls': ['http://www.89ip.cn/index_%s.html'%n for n in range(1, 20)],
+        'type': 'xpath',
+        'pattern': "/html/body/div[3]/div[1]/div/div[1]/table/tbody/tr[position()>0]",
+        'position': {'ip': './td[1]', 'port': './td[2]', 'type': '', 'protocol': ''}
+    },
+    {
+        'urls': ['http://www.qydaili.com/free/?page=%s' % n for n in range(1, 11)],
+        'type': 'xpath',
+        'pattern': "//*[@id='content']/section/div[2]/table/tbody/tr[position()>1]",
+        'position': {'ip': './td[1]', 'port': './td[2]', 'type': './td[3]', 'protocol': './td[4]'}
+    },
+    {
+        'urls': ['http://www.qydaili.com/free/?action=unchina'],
+        'type': 'xpath',
+        'pattern': "//*[@id='content']/section/div[2]/table/tbody/tr[position()>1]",
+        'position': {'ip': './td[1]', 'port': './td[2]', 'type': './td[3]', 'protocol': './td[4]'}
+    },
+    {
+    'urls': ['http://31f.cn/http-proxy/'],
+    'type': 'xpath',
+    'pattern': "/html/body/div/table[1]/tr[position()>1]",
+    'position': {'ip': './td[2]', 'port': './td[3]', 'type': '', 'protocol': ''}
+    },
+    {
+    'urls': ['https://ip.ihuan.me/address/5Lit5Zu9.html'],
+    'type': 'xpath',
+    'pattern': "/html/body/div[2]/div[2]/table/tbody/tr[position()>0]",
+    'position': {'ip': '.td[1]/a/text()', 'port': './td[2]', 'type': '.td[7]/a', 'protocol': ''}
+    },
+    {
+    'urls': ['https://ip.ihuan.me/address/576O5Zu9.html'],
+    'type': 'xpath',
+    'pattern': "/html/body/div[2]/div[2]/table/tbody/tr[position()>0]",
+    'position': {'ip': '.td[1]/a/text()', 'port': './td[2]', 'type': '.td[7]/a', 'protocol': ''}
+    },
+    {
+    'urls': ['https://ip.ihuan.me/address/5Lit5Zu9.html?page=%s'% n for n in ["4ce63706","5crfe930","f3k1d581","ce1d45977","881aaf7b5","eas7a436","981o917f5","2d28bd81a","a42g5985d","came0299","e92k59727","242r0e7b5","bc265a560"]],
+    'type': 'xpath',
+    'pattern': "/html/body/div[2]/div[2]/table/tbody/tr[position()>0]",
+    'position': {'ip': '.td[1]/a/text()', 'port': './td[2]', 'type': '.td[7]/a', 'protocol': ''}
+    },
+    {
+    'urls': ['https://ip.ihuan.me/address/5Lit5Zu9.html?page=%s'% n for n in ["4ce63706","5crfe930","f3k1d581","ce1d45977","881aaf7b5","eas7a436","981o917f5","2d28bd81a","a42g5985d","came0299","e92k59727","242r0e7b5","bc265a560"]],
+    'type': 'xpath',
+    'pattern': "/html/body/div[2]/div[2]/table/tbody/tr[position()>0]",
+    'position': {'ip': '.td[1]/a/text()', 'port': './td[2]', 'type': '.td[7]/a', 'protocol': ''}
+    },
+    {
+    'urls': ['https://ip.ihuan.me/address/6aaZ5riv.html'],
+    'type': 'xpath',
+    'pattern': "/html/body/div[2]/div[2]/table/tbody/tr[position()>0]",
+    'position': {'ip': '.td[1]/a/text()', 'port': './td[2]', 'type': '.td[7]/a', 'protocol': ''}
+    },
+    {
+    'urls': ['https://ip.ihuan.me/address/6aaZ5riv.html?page=%s'% n for n in ["4ce63706","5crfe930","f3k1d581","ce1d45977","881aaf7b5","eas7a436","981o917f5","2d28bd81a","a42g5985d","came0299","e92k59727","242r0e7b5","bc265a560"]],
+    'type': 'xpath',
+    'pattern': "/html/body/div[2]/div[2]/table/tbody/tr[position()>0]",
+    'position': {'ip': '.td[1]/a/text()', 'port': './td[2]', 'type': '.td[7]/a', 'protocol': ''}
+    },
+    {
+        'urls': ['http://www.superfastip.com/welcome/freeip/%s' % n for n in range(1, 11)],
+        'type': 'xpath',
+        'pattern': ".//div[@class='table rounded border-light']/table/tbody/tr[position()>1]",
+        'position': {'ip': './td[1]', 'port': './td[2]', 'type': './td[4]', 'protocol': './td[3]'}
     }
 ]
 '''
